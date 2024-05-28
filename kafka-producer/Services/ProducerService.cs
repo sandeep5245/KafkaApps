@@ -14,7 +14,7 @@ namespace InventoryProducer.Services
 
             var producerconfig = new ProducerConfig
             {
-                BootstrapServers = _configuration["Kafka:BootstrapServers"]
+                BootstrapServers = _configuration["Kafka:BootstrapServers"],
             };
 
             _producer = new ProducerBuilder<Null, string>(producerconfig).Build();

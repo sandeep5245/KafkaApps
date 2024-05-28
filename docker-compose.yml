@@ -11,6 +11,7 @@ services:
       - "8080:8080"
     environment:
       - KAFKA_TOPIC=InventoryUpdates
+      - environment=Development
   kafka-consumer:
     image: kafkaapps/kafka-consumer:latest
     build: 
